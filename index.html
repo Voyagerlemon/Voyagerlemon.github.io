@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0d13">
+  <meta name="description" content="Haiyang Xu (Hubel Xu), Nankai University. Research in 3D reconstruction, uncertainty quantification, crack detection, and machine learning.">
+  <title>Haiyang Xu · Research</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="#about" class="wordmark" aria-label="Haiyang Xu homepage">hx<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#research">Publications</a>
+      <a href="mailto:xuhaiyang@mail.nankai.edu.cn">Email ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section id="about" class="profile" aria-labelledby="profile-heading">
+      <div class="profile-copy">
+        <h1 id="profile-heading">Haiyang <span>Xu.</span></h1>
+        <p class="name-note">Hubel Xu <span lang="zh">许海洋</span></p>
+        <p class="affiliation">School of Statistics and Data Science<br><span class="university">Nankai University</span></p>
+        <p class="bio">My research spans <strong>3D reconstruction</strong>, <strong>uncertainty quantification</strong>, <strong>crack detection</strong>, and <strong>machine learning</strong>. I explore how to represent the world and understand the reliability of what we see.</p>
+        <p class="bio personal-note">I hope human civilization endures, and that our magnificent universe continues to shine.</p>
+        <a class="email-link" href="mailto:xuhaiyang@mail.nankai.edu.cn">xuhaiyang@mail.nankai.edu.cn <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="portrait-frame">
+        <img class="portrait" src="images/hubel-xu.jpg" width="1279" height="1634" alt="Haiyang Xu by the sea" fetchpriority="high">
+      </div>
+      <blockquote class="motto">“Stay hungry. Stay foolish.” <cite>— Steve Jobs</cite></blockquote>
+    </section>
+    <section id="research" class="research" aria-labelledby="research-heading">
+      <div class="publication-header">
+        <h2 id="research-heading">Publications<span class="heading-dot">.</span></h2>
+        <div class="filters" role="group" aria-label="Filter publications">
+          <button class="active" data-filter="all" aria-pressed="true">All</button>
+          <button data-filter="Published" aria-pressed="false">Published</button>
+          <button data-filter="Manuscript" aria-pressed="false">Manuscripts</button>
+        </div>
+      </div>
+      <div class="publication-list" id="projects"></div>
+    </section>
+  </main>
+  <footer><span>© 2026 Haiyang Xu</span><a href="#about">Back to top ↑</a></footer>
+  <dialog id="paper-dialog" aria-labelledby="modal-title">
+    <button class="close" aria-label="Close publication details">×</button>
+    <p class="eyebrow">RESEARCH</p>
+    <h2 id="modal-title"></h2>
+    <p id="modal-tag"></p>
+    <p id="modal-authors"></p>
+    <img id="modal-figure" hidden alt="">
+    <p id="modal-caption" class="publication-caption"></p>
+    <h3>Overview</h3>
+    <p id="modal-description"></p>
+    <div class="detail-note" id="modal-links"></div>
+    <button class="modal-done">Back to publications ↗</button>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
