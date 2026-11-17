@@ -64,20 +64,33 @@ const papers = [
   {
     "title": "FDAM: A Frequency-Direction-Aware Multi-Task Framework for Pavement Crack Grid Localization",
     "short": "FDAM",
-    "tag": "Manuscript",
-    "year": "Author manuscript",
+    "tag": "Preprint",
+    "year": "2026",
     "kind": "CRACK DETECTION / MULTI-TASK LEARNING",
     "desc": "Frequency and direction cues for thin pavement crack grid localization.",
     "authors": "Haiyang Xu, Bin Pan, Mengze Wang, Qiaoying Qu, and Zhenwei Shi.",
-    "detail": "Pavement crack grid localization remains challenging for thin and tiny cracks due to weak visual cues and background interference. Box detection often misses these cracks, while supervised semantic segmentation faces limited pixel-wise annotations and high labeling costs. In this paper, we propose a Frequency-Direction-Aware Multi-Task framework (FDAM) with box detection and grid classification branches. The core grid classification branch comprises Frequency-Domain Enhancement (FDE) and Directional Feature Refinement (DFR). FDE adaptively weights spectral bands and fuses reconstructed features with spatial features. DFR captures thin crack patterns through multi-scale strip convolutions, direction-sensitive modulation, and feature recalibration. Sparse positive cells and ambiguous local predictions motivate adaptive grid supervision. Adaptive Importance Reweighting emphasizes uncertain predictions and local label transitions, with focal supervision for all cells. Our contribution is to couple the box detection and grid classification branches through shared feature learning for pavement crack grid localization. We validate FDAM on our RoadDistress2026 dataset of thin and tiny cracks and further evaluate it on public datasets Crack500 and DeepCrack. The code is available at https://github.com/Lab-PANbin/FDAM.",
+    "detail": "Pavement crack grid localization remains challenging for thin and tiny cracks due to weak visual cues and background interference. Box detection often misses these cracks, while supervised semantic segmentation faces limited pixel-wise annotations and high labeling costs. In this paper, we propose a Frequency-Direction-Aware Multi-Task framework (FDAM) with box detection and grid classification branches. The core grid classification branch comprises Frequency-Domain Enhancement (FDE) and Directional Feature Refinement (DFR). FDE adaptively weights spectral bands and fuses reconstructed features with spatial features. DFR captures thin crack patterns through multi-scale strip convolutions, direction-sensitive modulation, and feature recalibration. Sparse positive cells and ambiguous local predictions motivate adaptive grid supervision. Adaptive Importance Reweighting emphasizes uncertain predictions and local label transitions, with focal supervision for all cells. Our contribution is to couple the box detection and grid classification branches through shared feature learning for pavement crack grid localization. We validate FDAM on our RoadDistress2026 dataset of thin and tiny cracks and further evaluate it on public datasets Crack500 and DeepCrack. The code is available at https://github.com/Lab-PANbin/FDAM",
     "image": "images/fdam-result.webp",
-    "pdf": "papers/fdam.pdf",
+    "pdf": "https://arxiv.org/pdf/2611.19089",
     "figure": "FDAM grid prediction on DeepCrack (Figure 5).",
-    "venue": "Author manuscript",
+    "venue": "arXiv:2611.19089 · Preprint, 2026",
     "links": [
       {
+        "label": "arXiv",
+        "href": "https://arxiv.org/abs/2611.19089"
+      },
+      {
         "label": "PDF",
-        "href": "papers/fdam.pdf"
+        "href": "https://arxiv.org/pdf/2611.19089"
+      },
+      {
+        "label": "Code",
+        "href": "https://github.com/Lab-PANbin/FDAM"
+      },
+      {
+        "label": "BibTeX",
+        "href": "fdam.bib",
+        "download": true
       }
     ]
   },
@@ -113,7 +126,9 @@ function paperLinks(paper) {
 function render() {
   root.replaceChildren();
   papers.forEach((paper, index) => {
-    if (selected !== 'all' && paper.tag !== selected) return;
+    const matchesFilter = selected === 'all' || paper.tag === selected
+      || (selected === 'Unpublished' && ['Preprint', 'Manuscript'].includes(paper.tag));
+    if (!matchesFilter) return;
     const entry = document.createElement('article');
     entry.className = 'publication';
     const preview = paper.image ? `<img src="${paper.image}" alt="" loading="lazy">` : paper.short;
