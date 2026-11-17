@@ -97,20 +97,29 @@ const papers = [
   {
     "title": "QuantileGS: Quantile-Based Conformal Bounds on RGB Rendering Errors for Novel View Synthesis with 3D Gaussian Splatting",
     "short": "QuantileGS",
-    "tag": "Manuscript",
-    "year": "Author manuscript",
+    "tag": "Preprint",
+    "year": "2026",
     "kind": "3D GAUSSIAN SPLATTING / UNCERTAINTY",
     "desc": "Calibrated rendering-error bounds for reliable novel view synthesis.",
     "authors": "Haiyang Xu†, Ziye Zhang†, Bin Pan, Xia Xu, and Zhenwei Shi. † Equal contribution.",
     "detail": "Uncertainty quantification for novel view synthesis with 3D Gaussian Splatting (3DGS) assesses rendering reliability at unseen viewpoints. This reliability depends on the discrepancy between rendered and true colors, which cannot be measured without ground-truth images. We therefore quantify uncertainty in this unknown discrepancy through upper bounds on per-pixel RGB mean absolute error. However, learned bounds may underestimate these errors and overstate rendering reliability, motivating calibration to a prescribed coverage level. In this paper, we propose QuantileGS, a post-hoc framework that combines learned rendering-error quantiles with scale-normalized conformal calibration to produce spatially adaptive error bounds. The framework comprises three phases. Phase 1, Rendering-Error Computation, measures RGB mean absolute error between observed images and predictions from a frozen 3DGS model. Phase 2, Ordered Gaussian Quantile Fields, learns two scalar attributes per Gaussian to predict lower and upper rendering-error quantiles. Phase 3, Scale-Normalized Conformal Calibration, calibrates the upper prediction on held-out images, using the quantile gap to scale the correction. Under the stated assumptions, the resulting bounds provide finite-sample marginal coverage. At a nominal coverage level of 90%, calibration raises mean empirical test coverage from 69.6% to 89.6% on LLFF and from 80.1% to 92.1% on Mip-NeRF 360. On LF, coverage remains conservative at 96.3% before and 96.4% after calibration. Applications to active view selection, Gaussian pruning, and RGB-D simultaneous localization and mapping illustrate how these bounds inform downstream decisions.",
     "image": "images/quantilegs-result.webp",
-    "pdf": "papers/quantilegs.pdf",
+    "pdf": "https://arxiv.org/pdf/2611.21253",
     "figure": "QuantileGS-C uncertainty map for the bicycle scene (Figure 3).",
-    "venue": "Author manuscript",
+    "venue": "arXiv:2611.21253 · Preprint, 2026",
     "links": [
       {
+        "label": "arXiv",
+        "href": "https://arxiv.org/abs/2611.21253"
+      },
+      {
         "label": "PDF",
-        "href": "papers/quantilegs.pdf"
+        "href": "https://arxiv.org/pdf/2611.21253"
+      },
+      {
+        "label": "BibTeX",
+        "href": "quantilegs.bib",
+        "download": true
       }
     ]
   }
