@@ -62,6 +62,35 @@ const papers = [
     "figure": "AFS-Net detection result for HRSC → SSDD (Figure 3d, second row)."
   },
   {
+    "title": "SpectralGS: Spectral Gaussian Splatting for Unsupervised Spectral Super-Resolution",
+    "short": "SpectralGS",
+    "tag": "Preprint",
+    "year": "2026",
+    "kind": "SPECTRAL SUPER-RESOLUTION / GAUSSIAN SPLATTING",
+    "desc": "Unsupervised spectral reconstruction from RGB images with spectral Gaussian splatting.",
+    "authors": "Qiaoying Qu, Bin Pan, Chen Jia, Haiyang Xu, Xia Xu, and Zhenwei Shi.",
+    "detail": "Unsupervised spectral super-resolution aims to recover spectral information from RGB images without paired hyperspectral data. However, the limited spectral information in RGB observations makes learning an effective spatial-spectral representation challenging, requiring the incorporation of structured spectral modeling with sensor imaging. In this paper, we propose SpectralGS, a spectral Gaussian splatting framework comprising two components: Shared Spectral Gaussian Representation and Spectral Response Projection Rendering. The representation module constructs a continuous spatial-spectral representation via shared spectral and local spatial Gaussian primitives, exploiting the low-rank spectral structure of hyperspectral images. The rendering module utilizes the spectral response function (SRF) to apply integral projection to the continuous representation, blending it to generate an RGB image. Consistency between the rendered and observed RGB images provides training supervision. Our main contribution is a Gaussian splatting framework that integrates structured continuous spatial-spectral representation with imaging response-based rendering, enabling unsupervised spectral reconstruction. Extensive experiments demonstrate that our method outperforms current state-of-the-art methods.",
+    "image": "images/spectralgs-result.png",
+    "pdf": "https://arxiv.org/pdf/2611.29388",
+    "figure": "SpectralGS SRF-projected reconstruction on DFC2018 (Figure 3).",
+    "venue": "arXiv:2611.29388 · Preprint, 2026",
+    "links": [
+      {
+        "label": "arXiv",
+        "href": "https://arxiv.org/abs/2611.29388"
+      },
+      {
+        "label": "PDF",
+        "href": "https://arxiv.org/pdf/2611.29388"
+      },
+      {
+        "label": "BibTeX",
+        "href": "spectralgs.bib",
+        "download": true
+      }
+    ]
+  },
+  {
     "title": "FDAM: A Frequency-Direction-Aware Multi-Task Framework for Pavement Crack Grid Localization",
     "short": "FDAM",
     "tag": "Preprint",
